@@ -6,7 +6,7 @@ client = OpenAI(api_key=st.secrets["apikey"])
 
 st.title("KurssiBot")
 
-MAX_CHAT_HISTORY = 10  # Adjust this number as needed
+MAX_CHAT_HISTORY = 1  # Adjust this number as needed
 
 # Initialize the openai_model in session_state with a default value
 st.session_state.setdefault("openai_model", "gpt-3.5-turbo-1106")
