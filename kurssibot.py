@@ -6,13 +6,12 @@ client = OpenAI(api_key=st.secrets["apikey"])
 
 st.title("KurssiBot")
 
-MAX_CHAT_HISTORY = 1
+# Initialize the openai_model in session_state with a default value
+st.session_state.setdefault("openai_model", "gpt-3.5-turbo-1106")
 
 # Initialize chat history
 if "messages" not in st.session_state:
     st.session_state.messages = []
-    # Load the system prompt only at the start of the session
-    st.session_state.messages.append({"role": "system", "content": system_prompt_content})
 
 # Display chat messages from history on app rerun
 for message in st.session_state.messages:
@@ -24,8 +23,8 @@ for message in st.session_state.messages:
 if prompt := st.chat_input("Kysy minulta neuvoa"):
     # Add user message to chat history
     st.session_state.messages.append({"role": "user", "content": prompt})
-    
-    # Trim chat history if necessary
+
+    # Check and trim chat history if necessary
     if len(st.session_state.messages) > MAX_CHAT_HISTORY:
         st.session_state.messages = st.session_state.messages[-MAX_CHAT_HISTORY:]
 
@@ -50,3 +49,4 @@ if prompt := st.chat_input("Kysy minulta neuvoa"):
     
     # Append assistant's response
     st.session_state.messages.append({"role": "assistant", "content": full_response})
+
