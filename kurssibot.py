@@ -13,7 +13,7 @@ st.session_state.setdefault("openai_model", "gpt-3.5-turbo-1106")
 
 # Initialize chat history and load the system prompt only at the start of the session
 if "messages" not in st.session_state:
-    st.session_state.messages = [{"role": "system", "content": system_prompt_content}]
+    st.session_state.messages = [{"role": "system", "content": system_prompt_content2}]
 
 # Display chat messages from history on app rerun
 for message in st.session_state.messages:
