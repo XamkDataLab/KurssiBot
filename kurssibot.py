@@ -15,8 +15,9 @@ for message in st.session_state.messages:
     if message["role"] != "system":
         with st.chat_message(message["role"]):
             st.markdown(message["content"])
-            
-prompt = st.text_area("Kysy minulta neuvoa", height=150)
+
+prompt = st.chat_input("Kysy minulta neuvoa")
+
 if prompt:
     st.session_state.messages.append({"role": "user", "content": prompt})
 
@@ -37,7 +38,6 @@ if prompt:
                         full_response += content
             message_placeholder.markdown(full_response + "▌")
             message_placeholder.markdown(full_response)
-    
     
     st.session_state.messages.append({"role": "assistant", "content": full_response})
 
