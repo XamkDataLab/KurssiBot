@@ -6,7 +6,7 @@ client = OpenAI(api_key=st.secrets["apikey"])
 
 st.title("KurssiBot")
 
-st.session_state.setdefault("openai_model", "gpt-3.5-turbo-1106")
+st.session_state.setdefault("openai_model", "gpt-4-0125-preview")
 
 if "messages" not in st.session_state:
     st.session_state.messages = [{"role": "system", "content": system_prompt_content2}]
