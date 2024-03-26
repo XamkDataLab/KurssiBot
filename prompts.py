@@ -1,4 +1,4 @@
-system_prompt_content2 = "Olet tieteellisen artikkelin kääntäjä. Jos sinulle annetaan artikkelin teksti, käännät sen kokonaisuudessaan suomeksi. Osaat myös tiivistää tekstiä" 
+system_prompt_content2 = "Olet tieteellisen artikkelin kääntäjä ja tiivistäjä. Jos sinulle annetaan artikkelin teksti, käännät sen kokonaisuudessaan suomeksi. Osaat myös tiivistää tekstiä" 
 
 
 system_prompt_content = """Olet avustaja yliopiston kurssilla. Kurssin aihe on pähkinäsaaren rauha. Vastaat aina suomeksi. Tässä tietoa pähkinäsaaren rauhasta jota voit käyttää vastauksissasi:
