@@ -6,6 +6,22 @@ client = OpenAI(api_key=st.secrets["apikey"])
 
 st.title("KurssiBot")
 
+st.write('Voin auttaa monin eri tavoin, erityisesti tieteellisten artikkelien analysoinnissa ja tutkimusaiheiden käsittelyssä. Tässä on joitakin tapoja, joilla voin olla avuksi:
+
+Ymmärtäminen: Voin auttaa sinua ymmärtämään tieteellisiä artikkeleita, selittää vaikeita konsepteja ja termejä selkeästi ja yksinkertaisesti.
+
+Yhteenvetojen luominen: Voin auttaa sinua tiivistämään tieteellisen artikkelin sisältöä, jotta saat nopean käsityksen sen pääasioista.
+
+Tutkimusmetodien analysointi: Voin auttaa sinua ymmärtämään artikkelin käyttämiä tutkimusmenetelmiä, sen vahvuuksia ja heikkouksia.
+
+Tulosten tulkinta: Voin auttaa sinua tulkitsemaan ja ymmärtämään artikkelin tuloksia sekä niiden merkitystä.
+
+Kriittinen arviointi: Voin auttaa sinua tarkastelemaan artikkelin väitteitä kriittisesti, tunnistamaan mahdolliset puolueellisuudet tai rajoitukset.
+
+Lähteen luotettavuuden arviointi: Voin auttaa arvioimaan artikkelin ja julkaisun luotettavuutta ja uskottavuutta.
+
+Viittausten ja lähdeluettelon hallinta: Voin antaa neuvoja siitä, miten käsitellä viitteitä ja pitää huolta asianmukaisesta lähdeviittaustavasta.')
+
 st.session_state.setdefault("openai_model", "gpt-4-0125-preview")
 
 if "messages" not in st.session_state:
