@@ -6,7 +6,7 @@ client = OpenAI(api_key=st.secrets["apikey"])
 
 st.title("KurssiBot")
 
-st.write('Voin auttaa monin eri tavoin, erityisesti tieteellisten artikkelien analysoinnissa ja tutkimusaiheiden käsittelyssä. Tässä on joitakin tapoja, joilla voin olla avuksi:
+st.write('''Voin auttaa monin eri tavoin, erityisesti tieteellisten artikkelien analysoinnissa ja tutkimusaiheiden käsittelyssä. Tässä on joitakin tapoja, joilla voin olla avuksi:
 
 Ymmärtäminen: Voin auttaa sinua ymmärtämään tieteellisiä artikkeleita, selittää vaikeita konsepteja ja termejä selkeästi ja yksinkertaisesti.
 
@@ -20,7 +20,7 @@ Kriittinen arviointi: Voin auttaa sinua tarkastelemaan artikkelin väitteitä kr
 
 Lähteen luotettavuuden arviointi: Voin auttaa arvioimaan artikkelin ja julkaisun luotettavuutta ja uskottavuutta.
 
-Viittausten ja lähdeluettelon hallinta: Voin antaa neuvoja siitä, miten käsitellä viitteitä ja pitää huolta asianmukaisesta lähdeviittaustavasta.')
+Viittausten ja lähdeluettelon hallinta: Voin antaa neuvoja siitä, miten käsitellä viitteitä ja pitää huolta asianmukaisesta lähdeviittaustavasta.''')
 
 st.session_state.setdefault("openai_model", "gpt-4-0125-preview")
 
